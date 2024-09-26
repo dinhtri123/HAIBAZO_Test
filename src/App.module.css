@@ -1,0 +1,110 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #111;
+}
+.main {
+  background: #fff;
+  max-width: 770px;
+  margin: 0px auto;
+  padding: 50px;
+}
+.main h2 {
+  color: #111;
+  margin-bottom: 15px;
+}
+.titleWin {
+  color: green
+}
+.titleLoss {
+  color: red;
+}
+.mainItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.mainItem h3 {
+  min-width: 100px;
+}
+.mainItem input {
+  background: #fff;
+  border: 1px solid #111;
+  min-height: 30px;
+  border-radius: 4px;
+  color: #111;
+  padding: 0px 10px;
+}
+.btnPlay {
+  padding: 8px 35px;
+  background: #ddd;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.boxResult {
+  margin-top: 20px;
+  width: 100%;
+  height: 670px;
+  border: 2px solid #111;
+  position: relative;
+}
+.boxResult span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  position: absolute;
+  cursor: pointer;
+  background: #fff;
+}
+.boxResult span.active {
+  background: red;
+  color: #fff;
+  animation: opacity 1s ease;
+  opacity: 0;
+  user-select: none;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    user-select: none;
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 767px) {
+  body {padding: 0;}
+  .mainItem {
+    min-width: 50px;
+  }
+}
